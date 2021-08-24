@@ -1,7 +1,6 @@
-import Layout from "../../components/Layout";
+import Layout from "../../components/Layout/Layout";
 import { createClient } from "contentful";
-import Image from "next/image";
-
+import { image, text, blogTitle } from "./detail.module.scss";
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
   accessToken: process.env.CONTENTFUL_ACCESS_KEY,
@@ -36,21 +35,21 @@ export const getStaticProps = async ({ params }) => {
 
 const BlogDetail = ({ blog }) => {
   console.log(blog);
-  const { title, content, thumbnail, createdAt } = blog.fields;
+  const { title, content, thumbnail } = blog.fields;
   const imageurl = "https:" + thumbnail.fields.file.url;
   return (
     <Layout>
       <div>
-        <div className="blogTitle">{title}</div>
+        <div className={blogTitle}>{title}</div>
         <div
-          className="image"
+          className={image}
           style={{
             backgroundImage: `url(
               ${imageurl}
               )`,
           }}
         ></div>
-        <div className="content">
+        <div className={text}>
           {content.content.map((c, index) => (
             <p key={index}>{c.content[0].value}</p>
           ))}

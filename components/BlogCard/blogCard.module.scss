@@ -1,0 +1,60 @@
+@import "../../styles/variables.scss";
+
+@mixin card($background: $color-light, $text: $text-dark) {
+  width: 300px;
+  height: fit-content;
+  margin: 30px;
+  border-radius: 5px;
+  letter-spacing: 3px;
+  font-family: $font-3;
+  background-color: $background;
+  color: $text;
+}
+
+@mixin action($background: $color-dark, $text: $text-light) {
+  text-decoration: none;
+  float: left;
+  margin-left: -30px;
+  padding: 5px;
+  display: block;
+  font-weight: bold;
+  width: 110px;
+  border-radius: 5px;
+  transform: rotate(-37.28deg);
+  background-color: $background;
+  color: $text;
+}
+
+.cardDark {
+  @include card($color-dark, $text-light);
+}
+.cardLight {
+  @include card($color-light, $text-dark);
+}
+
+.actionsLight a {
+  @include action($color-light, $text-dark);
+}
+.actionsDark a {
+  @include action($color-dark, $text-light);
+}
+
+.info {
+  text-transform: uppercase;
+  width: 250px;
+  height: 190px;
+  line-height: 40px;
+  text-indent: 0%;
+  letter-spacing: 3px;
+  font-family: $font-3;
+  padding: 10px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+.info::first-letter {
+  font-size: 50px;
+  color: $text-dark;
+  font-weight: bold;
+}

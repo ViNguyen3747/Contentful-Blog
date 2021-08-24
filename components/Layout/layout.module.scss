@@ -1,0 +1,60 @@
+@import "../../styles/variables.scss";
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  height: 200px;
+  margin-bottom: 20px;
+  background-image: url("/background.jpg");
+  background-size: cover;
+  background-position: right 35% top 25%;
+
+  a {
+    margin-top: 40px;
+    margin-left: 20vw;
+    text-decoration: none;
+    font-family: $font-1;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+
+  span {
+    display: block;
+    line-height: 1em;
+    margin: 10px;
+    color: $text-light;
+
+    &:first-child {
+      font-size: 2em;
+      font-weight: 400;
+    }
+    &:last-child {
+      font-size: 3em;
+      font-weight: 800;
+      margin-left: 10vw;
+    }
+  }
+
+  h2 {
+    font-size: 1.2em;
+    font-weight: 400;
+  }
+}
+
+.pageContent {
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer {
+  background: $color-dark-2;
+  color: $text-light;
+  padding: 40px;
+  text-align: center;
+  margin-top: auto;
+}

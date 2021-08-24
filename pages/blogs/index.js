@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Layout from "../../components/Layout";
+import Layout from "../../components/Layout/Layout";
 import { createClient } from "contentful";
-import BlogCard from "../../components/BlogCard";
+import BlogCard from "../../components/BlogCard/BlogCard";
+import { container } from "./blogs.module.scss";
 export async function getStaticProps() {
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
@@ -24,7 +25,7 @@ const Blogs = ({ blogs }) => {
   });
   return (
     <Layout>
-      <div className="container">
+      <div className={container}>
         {blogs.map((blog, index) => (
           <div
             key={blog.sys.id}
