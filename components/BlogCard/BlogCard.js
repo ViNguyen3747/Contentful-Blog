@@ -6,6 +6,7 @@ import {
   actionsDark,
   actionsLight,
   info,
+  image,
 } from "./blogCard.module.scss";
 export default function BlogCard({ blog, index }) {
   const { title, slug, thumbnail } = blog.fields;
@@ -25,6 +26,7 @@ export default function BlogCard({ blog, index }) {
           width="300"
           height="200"
           alt="blog post"
+          className={image}
         />
       </div>
     </div>
