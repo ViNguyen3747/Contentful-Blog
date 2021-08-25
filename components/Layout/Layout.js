@@ -1,15 +1,25 @@
 import Link from "next/link";
-import { layout, header, pageContent, footer } from "./layout.module.scss";
+import ActiveLink from "../useRouter";
+import {
+  layout,
+  title,
+  header,
+  pageContent,
+  footer,
+  link,
+} from "./layout.module.scss";
 export default function Layout({ children }) {
   return (
     <div className={layout}>
       <header className={header}>
-        <Link href="/blogs">
-          <a>
-            <span>Welcome To</span>
-            <span>My Blogs</span>
-          </a>
-        </Link>
+        <div className={title}>
+          <span>Welcome To</span>
+          <span>My Blogs</span>
+        </div>
+        <div className={link}>
+          <ActiveLink href="/blogs" link="Blogs" />
+          <ActiveLink href="/about" link="About Me" />
+        </div>
       </header>
       <div className={pageContent}>{children}</div>
       <footer className={footer}>

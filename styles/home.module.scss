@@ -1,0 +1,37 @@
+@import "./variables.scss";
+
+.home {
+  height: 100%;
+  overflow: hidden;
+}
+
+.video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1000;
+  overflow: hidden;
+  margin: 0;
+}
+.title {
+  margin: 30px;
+  color: transparent;
+  font-family: $font-1;
+  -webkit-text-stroke: white 3px;
+  font-size: 100px;
+  text-align: center;
+  letter-spacing: 20px;
+  font-weight: bold;
+  a {
+    text-decoration: none;
+    color: transparent;
+    font-size: 40px;
+    -webkit-text-stroke: white 3px;
+    &:hover {
+      color: white;
+    }
+  }
+}

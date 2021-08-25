@@ -1,6 +1,9 @@
 import Layout from "../../components/Layout/Layout";
 import { createClient } from "contentful";
 import { image, text, blogTitle } from "./detail.module.scss";
+import Skeleton from "../../components/Skeleton";
+import Image from "next/image";
+
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
   accessToken: process.env.CONTENTFUL_ACCESS_KEY,
@@ -19,7 +22,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 
@@ -28,12 +31,22 @@ export const getStaticProps = async ({ params }) => {
     content_type: "blogPost",
     "fields.slug": params.slug,
   });
+  if (!items.length) {
+    return {
+      redirect: {
+        destination: "/blogs",
+        permanent: false,
+      },
+    };
+  }
   return {
     props: { blog: items[0] },
+    revalidate: 1,
   };
 };
 
 const BlogDetail = ({ blog }) => {
+  if (!blog) return <Skeleton />;
   console.log(blog);
   const { title, content, thumbnail } = blog.fields;
   const imageurl = "https:" + thumbnail.fields.file.url;
@@ -41,14 +54,15 @@ const BlogDetail = ({ blog }) => {
     <Layout>
       <div>
         <div className={blogTitle}>{title}</div>
-        <div
-          className={image}
-          style={{
-            backgroundImage: `url(
-              ${imageurl}
-              )`,
-          }}
-        ></div>
+        <div className={image}>
+          <Image
+            src={`https:${thumbnail.fields.file.url}`}
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+            alt="blog post"
+          />
+        </div>
         <div className={text}>
           {content.content.map((c, index) => (
             <p key={index}>{c.content[0].value}</p>

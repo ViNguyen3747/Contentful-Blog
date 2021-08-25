@@ -1,10 +1,13 @@
 @import "../../styles/variables.scss";
 .image {
   height: 400px;
-  margin-bottom: 20px;
+  max-width: 90vw;
+  margin: 0 auto;
   margin-top: -38px;
-  background-size: cover;
-  background-position: right 35% top 50%;
+  margin-bottom: 20px;
+  position: relative;
+  background: rgb(192, 192, 192);
+  z-index: -1;
 }
 .text {
   text-align: left;

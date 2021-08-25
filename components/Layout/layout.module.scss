@@ -11,29 +11,46 @@
   background-size: cover;
   background-position: right 35% top 25%;
 
-  a {
-    margin-top: 40px;
+  .title {
+    margin-top: 20px;
     margin-left: 20vw;
-    text-decoration: none;
     font-family: $font-1;
     text-transform: uppercase;
     display: inline-block;
-  }
 
-  span {
-    display: block;
-    line-height: 1em;
-    margin: 10px;
-    color: $text-light;
+    span {
+      display: block;
+      line-height: 1em;
+      margin: 10px;
+      color: $text-light;
 
-    &:first-child {
-      font-size: 2em;
-      font-weight: 400;
+      &:first-child {
+        font-size: 2em;
+        font-weight: 400;
+      }
+      &:last-child {
+        font-size: 3em;
+        font-weight: 800;
+        margin-left: 10vw;
+      }
     }
-    &:last-child {
-      font-size: 3em;
-      font-weight: 800;
-      margin-left: 10vw;
+  }
+  .link {
+    a {
+      text-decoration: none;
+      margin-top: 28px;
+      margin-left: 20px;
+      font-family: $font-1;
+      color: $text-light;
+      text-transform: uppercase;
+      display: inline-block;
+      width: 100px;
+      height: 40px;
+      padding: 20px;
+      padding-bottom: 25px;
+      border-radius: 50%;
+      font-weight: bolder;
+      text-align: center;
     }
   }
 
