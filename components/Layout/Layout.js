@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import ActiveLink from "../useRouter";
 import {
   layout,
@@ -7,11 +8,21 @@ import {
   pageContent,
   footer,
   link,
+  image,
 } from "./layout.module.scss";
 export default function Layout({ children }) {
   return (
     <div className={layout}>
       <header className={header}>
+        <div className={image}>
+          <Image
+            src="/background.jpg"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="80% 30%"
+            alt="background"
+          />
+        </div>
         <div className={title}>
           <span>Welcome To</span>
           <span>My Blogs</span>

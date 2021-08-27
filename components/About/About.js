@@ -1,19 +1,42 @@
+import { useEffect } from "react";
 import Layout from "../Layout/Layout";
+import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import {
   container,
-  image,
   title,
   img1,
   img2,
   subtitle,
+  img,
+  gallery,
 } from "./about.module.scss";
 const AboutPage = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  });
   return (
     <Layout>
       <div className={container}>
-        <div className={image}>
-          <div className={img1}></div>
-          <div className={img2}></div>
+        <div>
+          <div className={img1}>
+            <Image
+              src="/img1.jpg"
+              layout="fill"
+              objectFit="cover"
+              alt="cover"
+            />
+          </div>
+          <div className={img2}>
+            <Image
+              src="/img2.jpg"
+              layout="fill"
+              objectFit="cover"
+              alt="avatar"
+            />
+          </div>
         </div>
         <div>
           <div className={title}>
@@ -22,6 +45,73 @@ const AboutPage = () => {
           <div className={subtitle}>
             I love designing websites and growing succulent 🌵
           </div>
+        </div>
+        <div className={gallery}>
+          <Image
+            data-aos="zoom-in-right"
+            data-aos-duration="2500"
+            data-aos-anchor-placement="center-bottom"
+            src="/image1.jpg"
+            width={500}
+            height={300}
+            alt="avatar"
+            className={img}
+          />
+          <div style={{ textAlign: "left" }}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Montes
+            nascetur ridiculus mus mauris vitae. Tellus integer feugiat
+            scelerisque varius. Elementum tempus egestas sed sed.
+          </div>
+          <div style={{ textAlign: "right" }}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl
+            suscipit adipiscing bibendum est ultricies integer quis auctor elit.
+            Auctor elit sed vulputate mi sit amet mauris commodo. Vel fringilla
+            est ullamcorper eget nulla facilisi.
+          </div>
+          <Image
+            data-aos="zoom-in-left"
+            data-aos-duration="2000"
+            data-aos-anchor-placement="center-bottom"
+            src="/image2.jpg"
+            width={500}
+            height={300}
+            alt="avatar"
+            className={img}
+          />
+          <Image
+            data-aos="zoom-in-right"
+            data-aos-duration="2000"
+            data-aos-anchor-placement="center-bottom"
+            src="/image3.jpg"
+            width={500}
+            height={300}
+            alt="avatar"
+            className={img}
+          />
+          <div style={{ textAlign: "left" }}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Vestibulum lorem sed risus ultricies. Quisque non tellus orci ac
+            auctor augue mauris augue neque.
+          </div>
+          <div style={{ textAlign: "right" }}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi
+            quis commodo odio aenean sed adipiscing diam donec. Mauris rhoncus
+            aenean vel elit scelerisque.
+          </div>
+          <Image
+            data-aos="zoom-in-left"
+            data-aos-duration="2000"
+            data-aos-anchor-placement="center-bottom"
+            src="/image4.jpg"
+            width={500}
+            height={300}
+            alt="avatar"
+            className={img}
+          />
         </div>
       </div>
     </Layout>

@@ -59,7 +59,7 @@ const BlogDetail = ({ blog }) => {
             src={`https:${thumbnail.fields.file.url}`}
             layout="fill"
             objectFit="cover"
-            quality={100}
+            quality={70}
             alt="blog post"
           />
         </div>
