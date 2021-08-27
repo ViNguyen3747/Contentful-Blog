@@ -11,6 +11,7 @@ import {
   subtitle,
   img,
   gallery,
+  image,
 } from "./about.module.scss";
 const AboutPage = () => {
   useEffect(() => {
@@ -20,7 +21,7 @@ const AboutPage = () => {
   return (
     <Layout>
       <div className={container}>
-        <div>
+        <div className={image}>
           <div className={img1}>
             <Image
               src="/img1.jpg"

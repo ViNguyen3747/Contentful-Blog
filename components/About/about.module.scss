@@ -1,9 +1,13 @@
 @import "../../styles/variables.scss";
 .container {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: center;
   margin-bottom: 30px;
+}
+
+.image {
+  margin: 0 auto;
 }
 
 .img1 {

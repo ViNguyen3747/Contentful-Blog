@@ -16,7 +16,7 @@ export default function Layout({ children }) {
       <header className={header}>
         <div className={image}>
           <Image
-            src="/background.jpg"
+            src="/background.webp"
             layout="fill"
             objectFit="cover"
             objectPosition="80% 30%"
