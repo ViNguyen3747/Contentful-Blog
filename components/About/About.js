@@ -48,7 +48,7 @@ const AboutPage = () => {
         </div>
         <div className={gallery}>
           <Image
-            data-aos="zoom-in-right"
+            data-aos="fade-right"
             data-aos-duration="2500"
             data-aos-anchor-placement="center-bottom"
             src="/image1.jpg"
@@ -57,13 +57,13 @@ const AboutPage = () => {
             alt="avatar"
             className={img}
           />
-          <div style={{ textAlign: "left" }}>
+          <div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Montes
             nascetur ridiculus mus mauris vitae. Tellus integer feugiat
             scelerisque varius. Elementum tempus egestas sed sed.
           </div>
-          <div style={{ textAlign: "right" }}>
+          <div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl
             suscipit adipiscing bibendum est ultricies integer quis auctor elit.
@@ -71,7 +71,7 @@ const AboutPage = () => {
             est ullamcorper eget nulla facilisi.
           </div>
           <Image
-            data-aos="zoom-in-left"
+            data-aos="fade-left"
             data-aos-duration="2000"
             data-aos-anchor-placement="center-bottom"
             src="/image2.jpg"
@@ -81,7 +81,7 @@ const AboutPage = () => {
             className={img}
           />
           <Image
-            data-aos="zoom-in-right"
+            data-aos="fade-right"
             data-aos-duration="2000"
             data-aos-anchor-placement="center-bottom"
             src="/image3.jpg"
@@ -90,20 +90,20 @@ const AboutPage = () => {
             alt="avatar"
             className={img}
           />
-          <div style={{ textAlign: "left" }}>
+          <div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
             Vestibulum lorem sed risus ultricies. Quisque non tellus orci ac
             auctor augue mauris augue neque.
           </div>
-          <div style={{ textAlign: "right" }}>
+          <div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi
             quis commodo odio aenean sed adipiscing diam donec. Mauris rhoncus
             aenean vel elit scelerisque.
           </div>
           <Image
-            data-aos="zoom-in-left"
+            data-aos="fade-left"
             data-aos-duration="2000"
             data-aos-anchor-placement="center-bottom"
             src="/image4.jpg"

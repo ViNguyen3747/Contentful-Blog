@@ -1,11 +1,10 @@
 @import "../../styles/variables.scss";
 .layout {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 .image {
-  width: 98vw;
+  min-width: 550px;
+  width: 100vw;
   height: 300px;
   z-index: -1;
   position: relative;
@@ -63,11 +62,9 @@
 }
 
 .pageContent {
-  max-width: 1200px;
   text-align: center;
   margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
+  justify-content: center;
 }
 
 .footer {
@@ -76,4 +73,5 @@
   padding: 40px;
   text-align: center;
   margin-top: auto;
+  min-width: 450px;
 }
