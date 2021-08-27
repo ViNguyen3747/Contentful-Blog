@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "cloudinary": "^1.26.3",
     "contentful": "^8.5.0",
     "gh-pages": "^3.2.3",
     "next": "11.1.0",

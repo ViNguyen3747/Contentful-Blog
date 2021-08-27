@@ -57,6 +57,7 @@ const BlogDetail = ({ blog }) => {
         <div className={image}>
           <Image
             src={`https:${thumbnail.fields.file.url}`}
+            priority="true"
             layout="fill"
             objectFit="cover"
             quality={70}

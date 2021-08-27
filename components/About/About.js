@@ -21,7 +21,7 @@ const AboutPage = () => {
   return (
     <Layout>
       <div className={container}>
-        <div className={image}>
+        <div data-aos="fade-up" data-aos-duration="1000" className={image}>
           <div className={img1}>
             <Image
               src="/img1.jpg"

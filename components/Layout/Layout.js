@@ -16,10 +16,11 @@ export default function Layout({ children }) {
       <header className={header}>
         <div className={image}>
           <Image
-            src="/background.webp"
+            priority="true"
+            src="/background.jpg"
             layout="fill"
             objectFit="cover"
-            objectPosition="80% 30%"
+            objectPosition="80% 50%"
             alt="background"
           />
         </div>
