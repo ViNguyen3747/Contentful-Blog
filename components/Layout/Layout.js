@@ -29,8 +29,8 @@ export default function Layout({ children }) {
           <span>My Blogs</span>
         </div>
         <div className={link}>
-          <ActiveLink href="/blogs" link="Blogs" />
           <ActiveLink href="/about" link="About Me" />
+          <ActiveLink href="/blogs" link="Blogs" />
         </div>
       </header>
       <div className={pageContent}>{children}</div>
