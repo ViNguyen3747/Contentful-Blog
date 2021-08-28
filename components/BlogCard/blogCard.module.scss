@@ -2,7 +2,7 @@
 
 @mixin card($background: $color-light, $text: $text-dark) {
   width: 300px;
-  height: fit-content;
+  height: 400px;
   margin: 30px;
   border-radius: 5px;
   letter-spacing: 3px;
@@ -43,7 +43,7 @@
 .info {
   text-transform: uppercase;
   width: fit-content;
-  padding: 20px;
+  padding: 30px;
   height: 150px;
   font-size: 20px;
   text-align: right;

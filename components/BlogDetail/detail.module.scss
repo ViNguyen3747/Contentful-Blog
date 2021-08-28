@@ -19,9 +19,8 @@
 }
 .text {
   @include textStyle();
-  text-indent: 20px;
+  line-height: 30px;
   font-size: 20px;
-  line-height: 35px;
 }
 
 .headline {
@@ -48,4 +47,19 @@
 .divider {
   color: $color-dark;
   font-size: larger;
+}
+
+.mediaGallery {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  div {
+    margin: 10px;
+  }
+}
+
+.videoStyle {
+  width: 85%;
+  min-width: 360px;
 }
