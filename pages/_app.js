@@ -1,4 +1,5 @@
 import "../styles/globals.scss";
+import "semantic-ui-css/semantic.min.css";
 import Head from "next/head";
 import { Fragment } from "react";
 import Layout from "../components/Layout/Layout";

@@ -1,4 +1,9 @@
 @import "../../styles/variables.scss";
+@mixin textStyle {
+  text-align: left;
+  font-family: $font-4;
+  letter-spacing: 1px;
+}
 .image {
   height: 400px;
   max-width: 90vw;
@@ -9,19 +14,21 @@
   background: rgb(192, 192, 192);
   z-index: -1;
 }
-.text {
-  text-align: left;
+.contentStyle {
   margin: 10px 60px 10px 60px;
+}
+.text {
+  @include textStyle();
   text-indent: 20px;
   font-size: 20px;
   line-height: 35px;
-  font-family: $font-2;
-  letter-spacing: 1px;
-  &::first-letter {
-    font-size: 70px;
-    color: $text-dark;
-    font-weight: bold;
-  }
+}
+
+.headline {
+  @include textStyle();
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: $color-dark-2;
 }
 
 .blogTitle {
@@ -36,4 +43,9 @@
   height: fit-content;
   padding: 20px;
   letter-spacing: 3px;
+}
+
+.divider {
+  color: $color-dark;
+  font-size: larger;
 }

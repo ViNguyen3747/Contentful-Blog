@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Layout from "../../components/Layout/Layout";
 import { createClient } from "contentful";
 import BlogCard from "../../components/BlogCard/BlogCard";
 import { container } from "./blogs.module.scss";

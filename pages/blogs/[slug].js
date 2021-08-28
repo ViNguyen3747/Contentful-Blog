@@ -1,9 +1,6 @@
-import Layout from "../../components/Layout/Layout";
 import { createClient } from "contentful";
-import { image, text, blogTitle } from "./detail.module.scss";
 import Skeleton from "../../components/Skeleton";
-import Image from "next/image";
-
+import Detail from "../../components/BlogDetail/Detail";
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
   accessToken: process.env.CONTENTFUL_ACCESS_KEY,
@@ -48,28 +45,8 @@ export const getStaticProps = async ({ params }) => {
 const BlogDetail = ({ blog }) => {
   if (!blog) return <Skeleton />;
   console.log(blog);
-  const { title, content, thumbnail } = blog.fields;
-  const imageurl = "https:" + thumbnail.fields.file.url;
-  return (
-    <div>
-      <div className={blogTitle}>{title}</div>
-      <div className={image}>
-        <Image
-          src={`https:${thumbnail.fields.file.url}`}
-          priority="true"
-          layout="fill"
-          objectFit="cover"
-          quality={70}
-          alt="blog post"
-        />
-      </div>
-      <div className={text}>
-        {content.content.map((c, index) => (
-          <p key={index}>{c.content[0].value}</p>
-        ))}
-      </div>
-    </div>
-  );
+
+  return <Detail blog={blog} />;
 };
 
 export default BlogDetail;
