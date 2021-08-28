@@ -1,0 +1,16 @@
+@import "../../styles/variables.scss";
+.container {
+  text-align: center;
+  margin-top: 50px;
+  font-family: $font-1;
+  font-size: larger;
+  color: $color-dark-2;
+  a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: $color-dark-2;
+    &:hover {
+      color: $color-light;
+    }
+  }
+}

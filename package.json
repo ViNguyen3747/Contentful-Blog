@@ -11,21 +11,18 @@
   "dependencies": {
     "aos": "^2.3.4",
     "cloudinary": "^1.26.3",
+    "cloudinary-build-url": "^0.2.1",
     "contentful": "^8.5.0",
     "gh-pages": "^3.2.3",
     "next": "11.1.0",
     "next-compose-plugins": "^2.2.1",
-    "next-optimized-images": "^2.6.2",
     "next-pwa": "^5.3.1",
     "next-seo": "^4.26.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "responsive-loader": "^2.3.0",
     "sass": "^1.38.1",
     "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^2.0.3",
-    "sharp": "^0.29.0",
-    "webp-loader": "^0.6.0"
+    "semantic-ui-react": "^2.0.3"
   },
   "devDependencies": {
     "eslint": "7.32.0",

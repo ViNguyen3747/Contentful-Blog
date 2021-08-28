@@ -51,26 +51,24 @@ const BlogDetail = ({ blog }) => {
   const { title, content, thumbnail } = blog.fields;
   const imageurl = "https:" + thumbnail.fields.file.url;
   return (
-    <Layout>
-      <div>
-        <div className={blogTitle}>{title}</div>
-        <div className={image}>
-          <Image
-            src={`https:${thumbnail.fields.file.url}`}
-            priority="true"
-            layout="fill"
-            objectFit="cover"
-            quality={70}
-            alt="blog post"
-          />
-        </div>
-        <div className={text}>
-          {content.content.map((c, index) => (
-            <p key={index}>{c.content[0].value}</p>
-          ))}
-        </div>
+    <div>
+      <div className={blogTitle}>{title}</div>
+      <div className={image}>
+        <Image
+          src={`https:${thumbnail.fields.file.url}`}
+          priority="true"
+          layout="fill"
+          objectFit="cover"
+          quality={70}
+          alt="blog post"
+        />
       </div>
-    </Layout>
+      <div className={text}>
+        {content.content.map((c, index) => (
+          <p key={index}>{c.content[0].value}</p>
+        ))}
+      </div>
+    </div>
   );
 };
 

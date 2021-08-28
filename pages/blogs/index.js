@@ -25,21 +25,19 @@ const Blogs = ({ blogs }) => {
     AOS.refresh();
   });
   return (
-    <Layout>
-      <div className={container}>
-        {blogs.map((blog, index) => (
-          <div
-            key={blog.sys.id}
-            data-aos="zoom-in"
-            data-aos-offset="200"
-            data-aos-duration="700"
-            data-aos-easing="ease"
-          >
-            <BlogCard blog={blog} index={index} />
-          </div>
-        ))}
-      </div>
-    </Layout>
+    <div className={container}>
+      {blogs.map((blog, index) => (
+        <div
+          key={blog.sys.id}
+          data-aos="zoom-in"
+          data-aos-offset="200"
+          data-aos-duration="700"
+          data-aos-easing="ease"
+        >
+          <BlogCard blog={blog} index={index} />
+        </div>
+      ))}
+    </div>
   );
 };
 
