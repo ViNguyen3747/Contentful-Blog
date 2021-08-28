@@ -17,7 +17,7 @@ export default function Layout({ children }) {
         <div className={image}>
           <Image
             priority="true"
-            src="/background.jpg"
+            src="https://res.cloudinary.com/tinastorage/image/fetch/q_auto,f_auto/https://contentful-blog-chi.vercel.app/background_rea9py.jpg"
             layout="fill"
             objectFit="cover"
             objectPosition="80% 50%"
