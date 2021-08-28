@@ -10,11 +10,11 @@ const Home = () => {
         height={300}
         alt="404 Page Not Found"
       />
-      <p>
+      <h1>
         <Link href="/about">
-          <a>Let me introduce myself :)))</a>
+          <a>Let me introduce myself ^^</a>
         </Link>
-      </p>
+      </h1>
     </div>
   );
 };

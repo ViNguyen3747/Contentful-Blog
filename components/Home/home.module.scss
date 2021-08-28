@@ -2,15 +2,19 @@
 .container {
   text-align: center;
   margin-top: 50px;
-  font-family: $font-1;
+  font-family: $font-5;
   font-size: larger;
   color: $color-dark-2;
   a {
     text-decoration: none;
     font-weight: bolder;
-    color: $color-dark-2;
+    letter-spacing: 5px;
+    line-height: 60px;
+    color: $color-light1;
+    text-transform: uppercase;
+    transition: all 0.4s ease-out;
     &:hover {
-      color: $color-light;
+      font-size: larger;
     }
   }
 }
