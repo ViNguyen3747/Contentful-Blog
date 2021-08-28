@@ -39,17 +39,17 @@
   .link {
     a {
       text-decoration: none;
-      margin-top: 60px;
+      margin-top: 65px;
       margin-left: 20px;
       font-family: $font-1;
       color: $text-light;
       text-transform: uppercase;
       display: inline-block;
-      width: 100px;
-      height: 40px;
-      padding: 20px;
-      padding-bottom: 25px;
-      border-radius: 50%;
+      width: 150px;
+      height: 80px;
+      padding: 10px 20px 10px 20px;
+      font-size: large;
+      border-radius: 40%;
       font-weight: bolder;
       text-align: center;
     }

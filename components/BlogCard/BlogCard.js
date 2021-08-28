@@ -17,9 +17,7 @@ export default function BlogCard({ blog, index }) {
           <a>Discover</a>
         </Link>
       </div>
-      <div className={info}>
-        <h4>{title}</h4>
-      </div>
+      <div className={info}>{title}</div>
       <div>
         <Image
           src={`https:${thumbnail.fields.file.url}`}

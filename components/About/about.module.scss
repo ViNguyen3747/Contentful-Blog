@@ -29,6 +29,7 @@
 }
 
 .title {
+  margin: 40px 0px 40px 0px;
   font-size: 70px;
   font-family: $font-4;
   span {
@@ -39,12 +40,14 @@
 
 .subtitle {
   font-size: 20px;
+  line-height: 30px;
   font-family: $font-4;
 }
 
 .gallery {
   font-size: 20px;
   font-family: $font-4;
+  line-height: 40px;
   @media only screen and (min-width: 900px) {
     margin-top: 30px;
     display: -ms-grid;

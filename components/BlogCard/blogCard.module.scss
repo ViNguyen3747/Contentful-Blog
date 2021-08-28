@@ -7,6 +7,7 @@
   border-radius: 5px;
   letter-spacing: 3px;
   font-family: $font-3;
+  line-height: 25px;
   background-color: $background;
   color: $text;
 }
@@ -41,16 +42,12 @@
 
 .info {
   text-transform: uppercase;
-  width: 250px;
-  height: 190px;
-  line-height: 40px;
-  text-indent: 0%;
-  letter-spacing: 3px;
-  font-family: $font-3;
-  padding: 10px;
-  text-align: center;
-  margin: 0 auto;
+  width: fit-content;
+  padding: 20px;
+  height: 150px;
   font-size: 20px;
+  text-align: right;
+  float: right;
 }
 
 .info::first-letter {

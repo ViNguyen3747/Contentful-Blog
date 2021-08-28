@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Divider } from "semantic-ui-react";
+import { Divider, List } from "semantic-ui-react";
 
 import {
   image,
@@ -71,6 +71,36 @@ const Content = ({ type, content }) => {
           </span>
         ))}
       </p>
+    );
+  else if (type === "ordered-list")
+    return (
+      <List as="ol">
+        {content.map((c, index) => (
+          <List.Item
+            as="li"
+            key={index}
+            className={text}
+            style={{ textIndent: "0px" }}
+          >
+            <Content content={c.content} type={c.nodeType} />
+          </List.Item>
+        ))}
+      </List>
+    );
+  else if (type === "unordered-list")
+    return (
+      <List as="ul">
+        {content.map((c, index) => (
+          <List.Item
+            as="li"
+            key={index}
+            className={text}
+            style={{ textIndent: "0px" }}
+          >
+            {c.content[0].content[0].value}
+          </List.Item>
+        ))}
+      </List>
     );
   else if (type === "hr") return <Divider className={divider} />;
 
