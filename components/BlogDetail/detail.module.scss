@@ -1,8 +1,18 @@
 @import "../../styles/variables.scss";
+
 @mixin textStyle {
   text-align: left;
   font-family: $font-4;
   letter-spacing: 1px;
+}
+
+@mixin gallery($num: 1) {
+  column-count: $num;
+  -moz-column-count: $num;
+  -webkit-column-count: $num;
+  column-width: 1 / $num;
+  -moz-column-width: 1 / $num;
+  -webkit-column-width: 1 / $num;
 }
 .image {
   height: 400px;
@@ -50,16 +60,57 @@
 }
 
 .mediaGallery {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  div {
-    margin: 10px;
+  @include gallery(1);
+}
+
+.mediaGallery2 {
+  @include gallery(2);
+  padding: 0 12px;
+}
+
+.mediaGallery3 {
+  @include gallery(3);
+  padding: 0 12px;
+  @media (max-width: 990px) {
+    @include gallery(2);
+  }
+  @media (max-width: 560px) {
+    @include gallery(1);
   }
 }
 
-.videoStyle {
-  width: 85%;
-  min-width: 360px;
+.singlemedia {
+  transition: all 350ms ease;
+  -webkit-transition: all 350ms ease;
+  cursor: pointer;
+
+  &:hover {
+    filter: opacity(0.8);
+  }
+}
+
+.modelStyle {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.89);
+  transition: opacity 0.4s ease, visibility 0.4s ease,
+    transform 0.5s ease-in-out;
+
+  overflow: hidden;
+  z-index: 999;
+}
+
+.icon {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  color: white;
+  cursor: pointer;
 }
