@@ -44,8 +44,6 @@ export const getStaticProps = async ({ params }) => {
 
 const BlogDetail = ({ blog }) => {
   if (!blog) return <Skeleton />;
-  console.log(blog);
-
   return <Detail blog={blog} />;
 };
 

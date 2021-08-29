@@ -2,7 +2,6 @@ import { Divider, List } from "semantic-ui-react";
 
 import { text, headline, divider } from "./detail.module.scss";
 const Content = ({ type, content, depth }) => {
-  console.log({ content, type, depth });
   const style = (marks) => {
     return {
       textDecoration: marks.find((m) => m.type === "underline")

@@ -27,15 +27,14 @@ const Media = ({ media }) => {
   });
 
   const classStyle = (length) => {
-    if (length > 2) return mediaGallery3;
+    if (length === 1) return mediaGallery;
     else if (length === 2) return mediaGallery2;
-    else return mediaGallery;
+    return mediaGallery3;
   };
 
   const getElement = (src, width, height, type = "image") => {
     setTempSrc({ src: "https:" + src, width, height, type });
     setModel(true);
-    console.log(tempSrc);
   };
   return (
     <>
@@ -53,7 +52,8 @@ const Media = ({ media }) => {
                 autoPlay
                 muted
                 loop
-                width={media.length === 1 ? 960 : 450}
+                width="100%"
+                height="auto"
                 onClick={() => getElement(m.fields.file.url, 0, 0, "video")}
               >
                 <source src={`https:${m.fields.file.url}`} type="video/mp4" />

@@ -18,7 +18,6 @@ export async function getStaticProps() {
   };
 }
 const Blogs = ({ blogs }) => {
-  console.log(blogs);
   useEffect(() => {
     AOS.init();
     AOS.refresh();
