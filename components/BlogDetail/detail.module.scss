@@ -13,6 +13,18 @@
   column-width: $width;
   -moz-column-width: $width;
   -webkit-column-width: $width;
+  -webkit-column-gap: 1em;
+  -moz-column-gap: 1em;
+  column-gap: 1em;
+}
+
+@mixin picked() {
+  transition: all 350ms ease;
+  -webkit-transition: all 350ms ease;
+  cursor: pointer;
+  &:hover {
+    filter: opacity(0.8);
+  }
 }
 .image {
   height: 400px;
@@ -52,6 +64,7 @@
   height: fit-content;
   padding: 20px;
   letter-spacing: 3px;
+  line-height: 40px;
 }
 
 .divider {
@@ -61,36 +74,35 @@
 
 .mediaGallery {
   @include gallery(1, 100%);
+  div {
+    @include picked();
+  }
 }
 
 .mediaGallery2 {
-  @include gallery(2, 50%);
-  @media (min-width: 100px) and (max-width: 560px) {
+  @include gallery(2, 45%);
+  @media (max-width: 560px) {
     @include gallery(1, 100%);
   }
-  padding: 0 12px;
+  div {
+    div {
+      @include picked();
+    }
+  }
 }
 
 .mediaGallery3 {
-  @media (min-width: 100px) and (max-width: 560px) {
-    @include gallery(1, 100%);
-  }
-
-  @media (min-width: 561px) and (max-width: 990px) {
+  @include gallery(3, 33%);
+  @media (max-width: 991px) {
     @include gallery(2, 50%);
   }
 
-  @include gallery(3, 33%);
-  padding: 0 12px;
-}
+  @media (max-width: 560px) {
+    @include gallery(1, 100%);
+  }
 
-.singlemedia {
-  transition: all 350ms ease;
-  -webkit-transition: all 350ms ease;
-  cursor: pointer;
-
-  &:hover {
-    filter: opacity(0.8);
+  div {
+    @include picked();
   }
 }
 
@@ -104,8 +116,6 @@
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.89);
-  transition: opacity 0.4s ease, visibility 0.4s ease,
-    transform 0.5s ease-in-out;
   overflow: hidden;
   z-index: 999;
 }

@@ -40,13 +40,7 @@ const Media = ({ media }) => {
     <>
       <div className={classStyle(media.length)}>
         {media.map((m, index) => (
-          <div
-            key={index}
-            className={singlemedia}
-            data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-anchor-placement="top-bottom"
-          >
+          <div key={index}>
             {m.fields.file.contentType === "video/mp4" ? (
               <video
                 autoPlay
@@ -63,6 +57,7 @@ const Media = ({ media }) => {
                 src={`https:${m.fields.file.url}`}
                 width={m.fields.file.details.image.width}
                 height={m.fields.file.details.image.height}
+                layout="intrinsic"
                 onClick={() =>
                   getElement(
                     m.fields.file.url,
@@ -88,7 +83,7 @@ const Media = ({ media }) => {
               src={tempSrc.src}
               width={tempSrc.width / 4}
               height={tempSrc.height / 4}
-              alt="media"
+              alt="chosen media"
             />
           )}
           <Icon
