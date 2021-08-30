@@ -31,7 +31,7 @@
 .title {
   margin: 40px 0px 40px 0px;
   font-size: 70px;
-  font-family: $font-4;
+  font-family: $font-2;
   span {
     font-size: larger;
     color: $color-dark;
@@ -41,12 +41,12 @@
 .subtitle {
   font-size: 20px;
   line-height: 30px;
-  font-family: $font-4;
+  font-family: $font-2;
 }
 
 .gallery {
   font-size: 20px;
-  font-family: $font-4;
+  font-family: $font-2;
   line-height: 40px;
   @media only screen and (min-width: 900px) {
     margin-top: 30px;
@@ -64,16 +64,5 @@
     -ms-grid-row-align: center;
     -ms-flex-item-align: center;
     -webkit-align-self: center;
-  }
-}
-
-@keyframes movein {
-  from {
-    opacity: 0;
-    transform: translate(0, 50px);
-  }
-  to {
-    opacity: 1;
-    transform: translate(0, 0);
   }
 }

@@ -2,7 +2,7 @@
 
 @mixin textStyle {
   text-align: left;
-  font-family: $font-4;
+  font-family: $font-2;
   letter-spacing: 1px;
 }
 
@@ -16,16 +16,16 @@
   -webkit-column-gap: 1em;
   -moz-column-gap: 1em;
   column-gap: 1em;
-}
-
-@mixin picked() {
-  transition: all 350ms ease;
-  -webkit-transition: all 350ms ease;
-  cursor: pointer;
-  &:hover {
-    filter: opacity(0.8);
+  div {
+    transition: all 300ms ease;
+    -webkit-transition: all 370ms ease;
+    cursor: pointer;
+    &:hover {
+      filter: opacity(0.8);
+    }
   }
 }
+
 .image {
   height: 400px;
   max-width: 90vw;
@@ -42,12 +42,11 @@
 .text {
   @include textStyle();
   line-height: 30px;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .headline {
   @include textStyle();
-  text-transform: uppercase;
   letter-spacing: 3px;
   color: $color-dark-2;
 }
@@ -74,20 +73,12 @@
 
 .mediaGallery {
   @include gallery(1, 100%);
-  div {
-    @include picked();
-  }
 }
 
 .mediaGallery2 {
   @include gallery(2, 45%);
   @media (max-width: 560px) {
     @include gallery(1, 100%);
-  }
-  div {
-    div {
-      @include picked();
-    }
   }
 }
 
@@ -99,10 +90,6 @@
 
   @media (max-width: 560px) {
     @include gallery(1, 100%);
-  }
-
-  div {
-    @include picked();
   }
 }
 
