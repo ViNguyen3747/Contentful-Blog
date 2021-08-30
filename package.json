@@ -10,13 +10,9 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
-    "cloudinary": "^1.26.3",
-    "cloudinary-build-url": "^0.2.1",
     "contentful": "^8.5.0",
     "gh-pages": "^3.2.3",
     "next": "11.1.0",
-    "next-compose-plugins": "^2.2.1",
-    "next-pwa": "^5.3.1",
     "next-seo": "^4.26.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",

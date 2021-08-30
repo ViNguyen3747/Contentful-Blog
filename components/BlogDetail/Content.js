@@ -1,6 +1,7 @@
 import { Divider, List } from "semantic-ui-react";
 
 import { text, headline, divider } from "./detail.module.scss";
+
 const Content = ({ type, content, depth }) => {
   const style = (marks) => {
     return {

@@ -5,7 +5,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Icon } from "semantic-ui-react";
 import {
-  singlemedia,
   mediaGallery,
   mediaGallery2,
   mediaGallery3,
@@ -39,8 +38,8 @@ const Media = ({ media }) => {
   return (
     <>
       <div className={classStyle(media.length)}>
-        {media.map((m, index) => (
-          <div key={index}>
+        {media.map((m) => (
+          <div key={m.sys.id}>
             {m.fields.file.contentType === "video/mp4" ? (
               <video
                 autoPlay

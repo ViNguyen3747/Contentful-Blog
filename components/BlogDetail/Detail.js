@@ -6,6 +6,7 @@ import Media from "./Media";
 
 const Detail = ({ blog }) => {
   const { title, content, thumbnail, media } = blog.fields;
+  const id = blog.sys.id;
   return (
     <>
       <div className={blogTitle}>{title}</div>
@@ -22,7 +23,7 @@ const Detail = ({ blog }) => {
       <div className={contentStyle}>
         {content.content.map((c, index) => (
           <Content
-            key={index}
+            key={`id${index}`}
             type={c.nodeType}
             content={c.content}
             depth={0}
